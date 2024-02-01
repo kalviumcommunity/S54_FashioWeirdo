@@ -1,0 +1,11 @@
+{
+  "name": "s54_fashioweirdo",
+  "version": "1.0.0",
+  "description": "Hello Folks Welcome to **FashioWeirdo** this project dives into the fashion of celebrities that you or any people find weird. Have you ever wondered who among  the celebrities have wildest and weirdest *fashion sense.* Well your in for a ride come along let's enjoy this adventure.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
