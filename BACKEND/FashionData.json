@@ -1,0 +1,63 @@
+[
+    {
+        "Celebrity Name": "Justin Beiber",
+        "Celebrity Region": "Canada",
+        "Image link": "https://cdn.wionews.com/sites/default/files/inline-images/GettyImages-1389378636_1.jpg"
+    },
+
+    {
+        "Celebrity Name": "Billie Eilish",
+        "Celebrity Region": "America",
+        "Image link":"https://cdn.wionews.com/sites/default/files/inline-images/03GRAMMYS-RED-CARPET-eilish-mobileMasterAt3x-v3%20%281%29.jpg"
+    },
+
+    {
+        "Celebrity Name": "Ranveer Singh",
+        "Celebrity Region":"India",
+        "Image link":"https://cdn.wionews.com/sites/default/files/inline-images/9a2a0c73cac5e2f0893e89c1c1c27940_1_0.jpg"
+
+    },
+
+    {
+        "Celebrity Name": "Tayla Parx",
+        "Celebrity Region":"America",
+        "Image link":"https://cdn.wionews.com/sites/default/files/inline-images/624a318be22adb0018d1cc55.jpg"
+    },
+
+    {
+        "Celebrity Name": "Priyanka Chopra",
+        "Celebrity Region":"India",
+        "Image link":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-epT9vfa_7xuhr3icy1_a1J0gyVGWlkyNyg&usqp=CAU"
+    },
+
+    {
+        "Celebrity Name": "Noah Cyrus",
+        "Celebrity Region": "America",
+        "Image link":"https://i.insider.com/604e9fa310c8760018b93220?width=600&format=jpeg&auto=webp"
+    },
+
+    {
+        "Celebrity Name": "Elena Lenina",
+        "Celebrity Region": "Russia",
+        "Image link":"https://i.insider.com/61bcb82d747840001964e67e?width=800&format=jpeg&auto=webp"
+    },
+
+    {
+        "Celebrity Name": "Doja Cat" ,
+        "Celebrity Region": "America",
+        "Image link":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRX6Eyeeu2j1tsCJbEakdEgNNb2n7fmp0KmleC6vNNJX3K7jaj29tOM9gJQSEqmfXSzkHM&usqp=CAU"
+    },
+
+    {
+        "Celebrity Name": "Harry Styles",
+        "Celebrity Region": "Great Britain",
+        "Image link": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTnuPZ0R3ITRSxrwshDnFyNYW1pIKGcFQgw0RZJ14ye6eD_FEzUqJIpjqUj5L0nfa-2e7Y&usqp=CAU"
+    }, 
+
+    {
+        "Celebrity Name": "Pharrell Williams",
+        "Celebrity Region": "America",
+        "Image link": "https://img.buzzfeed.com/buzzfeed-static/static/2021-09/30/19/asset/97a2e32a5560/sub-buzz-465-1633029120-18.jpg?downsize=600:*&output-format=auto&output-quality=auto"
+    }
+
+]
