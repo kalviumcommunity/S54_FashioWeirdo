@@ -4,12 +4,15 @@
   "description": "Hello Folks Welcome to **FashioWeirdo** this project dives into the fashion of celebrities that you or any people find weird. Have you ever wondered who among  the celebrities have wildest and weirdest *fashion sense.* Well your in for a ride come along let's enjoy this adventure.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "devStart": "nodemon server.js"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.18.2"
+    "dotenv": "^16.4.2",
+    "express": "^4.18.2",
+    "mongoose": "^8.1.2",
+    "nodemon": "^3.0.3"
   }
 }
-    

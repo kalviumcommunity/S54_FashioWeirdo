@@ -1,10 +1,19 @@
-const exp = require('express')
-const app = exp()
+const express = require('express');
+const app = express();
+const connection = require("./dbConnection");
+
 
 // creating routes over here
-app.get('/',(req,res)=>{
-    res.send('Hello welcome to node API of FashioWeirdo')
+connection().then(response=>{
+    app.get('/',(req,res)=>{
+        res.send(response)
+    })
+}).catch(response=>{
+    app.get('/',(req,res)=>{
+        res.send(response)
+    })
 })
+
 app.get('/ping',(req,res)=>{
     res.send('We hope to see you soon')
 })
