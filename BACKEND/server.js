@@ -6,11 +6,11 @@ const connection = require("./dbConnection");
 // creating routes over here
 connection().then(response=>{
     app.get('/',(req,res)=>{
-        res.send(response)
+        res.send("database is connected")
     })
 }).catch(response=>{
     app.get('/',(req,res)=>{
-        res.send(response)
+        res.send("failed to connect")
     })
 })
 
