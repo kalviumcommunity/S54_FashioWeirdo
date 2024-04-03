@@ -4,7 +4,6 @@ const {fashio} = require('../Schema/schema');
 const getAllData = async(req,res)=>{
     try {
         const AllData = await fashio.find({});
-        console.log('AllData',AllData)
         res.status(200).json(AllData)
     } catch (error) {
         console.log("error",error)
