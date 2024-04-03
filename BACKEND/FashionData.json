@@ -1,63 +1,62 @@
 [
     {
-        "Celebrity Name": "Justin Beiber",
-        "Celebrity Region": "Canada",
-        "Image link": "https://cdn.wionews.com/sites/default/files/inline-images/GettyImages-1389378636_1.jpg"
+        "name": "Justin Beiber",
+        "region": "Canada",
+        "image": "https://cdn.wionews.com/sites/default/files/inline-images/GettyImages-1389378636_1.jpg",
+        "description": "Justin Bieber rocked an oversized Balenciaga suit at the 63rd Grammy Awards, accessorized with neon pink beanie and demonic HardCrocs."
     },
-
     {
-        "Celebrity Name": "Billie Eilish",
-        "Celebrity Region": "America",
-        "Image link":"https://cdn.wionews.com/sites/default/files/inline-images/03GRAMMYS-RED-CARPET-eilish-mobileMasterAt3x-v3%20%281%29.jpg"
+        "name": "Billie Eilish",
+        "region": "America",
+        "image": "https://cdn.wionews.com/sites/default/files/inline-images/03GRAMMYS-RED-CARPET-eilish-mobileMasterAt3x-v3%20%281%29.jpg",
+        "description": "Billie Eilish made a statement at the 2022 Grammys with a daring Rick Owens ensemble that left viewers intrigued. The outfit, a curious blend of dress and jacket, sparked conversation with its unconventional aesthetic. Paired with small-framed sunglasses, gold earrings, and sleek black shoes, her '90s-inspired hairstyle added an unexpected twist to the ensemble."
     },
-
     {
-        "Celebrity Name": "Ranveer Singh",
-        "Celebrity Region":"India",
-        "Image link":"https://cdn.wionews.com/sites/default/files/inline-images/9a2a0c73cac5e2f0893e89c1c1c27940_1_0.jpg"
-
+        "name": "Ranveer Singh",
+        "region": "India",
+        "image": "https://cdn.wionews.com/sites/default/files/inline-images/9a2a0c73cac5e2f0893e89c1c1c27940_1_0.jpg",
+        "description": "Ranveer Singh wore this vibrant costume to the song launch event for his movie 'Jayeshbhai Jordaar,' which caught everyone's attention—but in the wrong way."
     },
-
     {
-        "Celebrity Name": "Tayla Parx",
-        "Celebrity Region":"America",
-        "Image link":"https://cdn.wionews.com/sites/default/files/inline-images/624a318be22adb0018d1cc55.jpg"
+        "name": "Tayla Parx",
+        "region": "America",
+        "image": "https://cdn.wionews.com/sites/default/files/inline-images/624a318be22adb0018d1cc55.jpg",
+        "description": "At the Grammys, singer, songwriter, and actress Tayla Parx opted for a vibrant green and yellow spiky one-piece, reminiscent of a character from a video game. While the dino-inspired ensemble didn't quite accentuate her features, it certainly ensured she stood out from the crowd."
     },
-
     {
-        "Celebrity Name": "Priyanka Chopra",
-        "Celebrity Region":"India",
-        "Image link":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-epT9vfa_7xuhr3icy1_a1J0gyVGWlkyNyg&usqp=CAU"
+        "name": "Priyanka Chopra",
+        "region": "India",
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-epT9vfa_7xuhr3icy1_a1J0gyVGWlkyNyg&usqp=CAU",
+        "description": "Priyanka Chopra rocked a captivating silvery caged ensemble by Dior at the 2019 MET Gala, perfectly embodying the Camp: Notes on Fashion theme. Her bold choice, paired with dramatic makeup and wild curls, made for a striking and memorable look."
     },
-
     {
-        "Celebrity Name": "Noah Cyrus",
-        "Celebrity Region": "America",
-        "Image link":"https://i.insider.com/604e9fa310c8760018b93220?width=600&format=jpeg&auto=webp"
+        "name": "Noah Cyrus",
+        "region": "America",
+        "image": "https://i.insider.com/604e9fa310c8760018b93220?width=600&format=jpeg&auto=webp",
+        "description": "Noah Cyrus wore Schiaparelli Haute Couture to the 63RD Grammy Awards"
     },
-
     {
-        "Celebrity Name": "Elena Lenina",
-        "Celebrity Region": "Russia",
-        "Image link":"https://i.insider.com/61bcb82d747840001964e67e?width=800&format=jpeg&auto=webp"
+        "name": "Elena Lenina",
+        "region": "Russia",
+        "image": "https://i.insider.com/61bcb82d747840001964e67e?width=800&format=jpeg&auto=webp",
+        "description": "Elena Lenina's Cannes fashion is always a spectacle. In 2021, amidst a stunning black gown, her attention-grabbing braided hairstyle turned heads. Known for pushing boundaries, her bold looks often blur the line between Cannes elegance and Met Gala extravagance."
     },
-
     {
-        "Celebrity Name": "Doja Cat" ,
-        "Celebrity Region": "America",
-        "Image link":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRX6Eyeeu2j1tsCJbEakdEgNNb2n7fmp0KmleC6vNNJX3K7jaj29tOM9gJQSEqmfXSzkHM&usqp=CAU"
+        "name": "Doja Cat",
+        "region": "America",
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRX6Eyeeu2j1tsCJbEakdEgNNb2n7fmp0KmleC6vNNJX3K7jaj29tOM9gJQSEqmfXSzkHM&usqp=CAU",
+        "description": "'Doja's Inferno' look, featuring 30,000 Swarovski crystals, was a testament to her dedication to style."
     },
-
     {
-        "Celebrity Name": "Harry Styles",
-        "Celebrity Region": "Great Britain",
-        "Image link": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTnuPZ0R3ITRSxrwshDnFyNYW1pIKGcFQgw0RZJ14ye6eD_FEzUqJIpjqUj5L0nfa-2e7Y&usqp=CAU"
-    }, 
-
+        "name": "Harry Styles",
+        "region": "Great Britain",
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTnuPZ0R3ITRSxrwshDnFyNYW1pIKGcFQgw0RZJ14ye6eD_FEzUqJIpjqUj5L0nfa-2e7Y&usqp=CAU",
+        "description": "Harry styles wore rainbow patchwork Egonlab jumpsuit covered in Swarovski crystals."
+    },
     {
-        "Celebrity Name": "Pharrell Williams",
-        "Celebrity Region": "America",
-        "Image link": "https://img.buzzfeed.com/buzzfeed-static/static/2021-09/30/19/asset/97a2e32a5560/sub-buzz-465-1633029120-18.jpg?downsize=600:*&output-format=auto&output-quality=auto"
+        "name": "Pharrell Williams",
+        "region": "America",
+        "image": "https://img.buzzfeed.com/buzzfeed-static/static/2021-09/30/19/asset/97a2e32a5560/sub-buzz-465-1633029120-18.jpg?downsize=600:*&output-format=auto&output-quality=auto",
+        "description": "The twist Pharrell Williams put on a classic tux for the European premiere of The Lion King certainly didn't fall short.`"
     }
-
 ]
