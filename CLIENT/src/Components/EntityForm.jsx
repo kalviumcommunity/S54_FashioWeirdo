@@ -3,7 +3,7 @@ import { useForm } from "react-hook-form";
 import axios from "axios";
 
 function EntityForm() {
-    const { register, handleSubmit } = useForm();
+    const { register, handleSubmit, formState: { errors } } = useForm();
     const [formData, setFormData] = useState(null);
 
     useEffect(() => {
@@ -30,19 +30,23 @@ function EntityForm() {
                 <form onSubmit={handleSubmit(onSubmit)} className="forms">
                     <label className="nameform">
                         Name:
-                        <input type="text" {...register("name", { required: true })} className="namef" /> <br />
+                        <input type="text" {...register("name", { required: "Name is required" })} className="namef" /> <br />
+                        {errors.name && <p className="error-msg">{errors.name.message}</p>}
                     </label>
                     <label className="image-form">
                         Image URL:
-                        <input type="text" {...register("image", { required: true })} className="imagef" /> <br />
+                        <input type="text" {...register("image", { required: "Image URL is required" })} className="imagef" /> <br />
+                        {errors.image && <p className="error-msg">{errors.image.message}</p>}
                     </label>
                     <label className="region-form">
                         Region:
-                        <input type="text" {...register("region", { required: true })} className="regionf" /> <br />
+                        <input type="text" {...register("region", { required: "Region is required" })} className="regionf" /> <br />
+                        {errors.region && <p className="error-msg">{errors.region.message}</p>}
                     </label>
                     <label className="description">
                         Description:
-                        <input type="text" {...register("description", { required: true })} className="descript" /> <br />
+                        <input type="text" {...register("description", { required: "Description is required" })} className="descript" /> <br />
+                        {errors.description && <p className="error-msg">{errors.description.message}</p>}
                     </label>
                     <button type="submit">Submit</button>
                 </form>
@@ -52,3 +56,4 @@ function EntityForm() {
 }
 
 export default EntityForm;
+
