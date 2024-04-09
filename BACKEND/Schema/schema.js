@@ -18,10 +18,7 @@ const FashionSchema = new mongoose.Schema({
         required: true,
         index: true,
     },
-    // created_by:{
-    //     type : String,
-    //     required: true
-    // }
+
    
 });
 
