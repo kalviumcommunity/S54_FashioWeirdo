@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
 import axios from "axios";
+import { toast, ToastContainer } from "react-toastify"; // Import ToastContainer and toast from react-toastify
+import "react-toastify/dist/ReactToastify.css"; // Import toastify css
 
 function EntityForm() {
     const { register, handleSubmit, formState: { errors } } = useForm();
@@ -11,6 +13,8 @@ function EntityForm() {
             try {
                 if (formData) {
                     await axios.post(import.meta.env.VITE_API_URL, formData);
+                    // If the form is successfully submitted, show a success toast
+                    toast.success("Form submitted successfully!");
                 }
             } catch (error) {
                 console.log("Error adding entity", error);
@@ -51,9 +55,9 @@ function EntityForm() {
                     <button type="submit">Submit</button>
                 </form>
             </div>
+            <ToastContainer /> 
         </div>
     );
 }
 
 export default EntityForm;
-
