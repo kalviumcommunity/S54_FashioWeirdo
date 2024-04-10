@@ -16,10 +16,10 @@ function Posts() {
       try {
         const response = await axios.get(import.meta.env.VITE_API_URL);
         setData(response.data);
-        setError(null); // Reset error state if successful
+        setError(null); 
       } catch (error) {
         console.error("Error fetching data:", error);
-        setError("Error fetching data. Please try again."); // Set error message
+        setError("Error fetching data. Please try again."); 
       }
     }
     fetchData();
