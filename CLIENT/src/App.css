@@ -189,7 +189,7 @@ body{
   margin-top: auto 5px;
   box-shadow: 5px 2px 4px rgba(0, 0, 0, 0.5); 
   cursor: pointer;
-  position: relative; /* Added for proper z-index positioning */
+  position: relative; 
 }
 
 .post-item img {
@@ -198,7 +198,7 @@ body{
 }
 
 .post-description {
-  display: none; /* Initially hidden */
+  display: none; 
   position: absolute;
   top: 50%;
   left: 50%;
@@ -206,15 +206,15 @@ body{
   background-color: rgba(255, 255, 255, 0.9);
   padding: 10px;
   border-radius: 5px;
-  z-index: 1; /* Ensure description is on top of other content */
+  z-index: 1; 
 }
 
 .post-item:hover .post-description {
-  display: block; /* Displayed when hovered */
+  display: block; 
 }
 
 .modal {
-  display: none; /* Initially hidden */
+  display: none; 
   position: fixed;
   z-index: 1;
   left: 0;
@@ -226,14 +226,14 @@ body{
 }
 
 .modal.active {
-  display: block; /* Displayed when active class is present */
+  display: block;
 }
 
 .modal-content {
   display: flex;
-  flex-direction: column; /* Ensures children stack vertically */
-  align-items: center; /* Aligns children horizontally */
-  justify-content: center; /* Aligns children vertically */
+  flex-direction: column; 
+  align-items: center; 
+  justify-content: center; 
   background-color: #fefefe;
   margin: 15% auto;
   padding: 20px;
@@ -276,7 +276,7 @@ body{
   left:600px ;
 }
 
-/* Existing CSS styles */
+
 
 .forms {
   width: 25vw;
@@ -306,7 +306,7 @@ body{
   background-color: #00872b;
 }
 
-/* New CSS for background */
+
 
 .forms {
   background: rgba(0, 0, 0, 0.9); /* Semi-transparent black background */
@@ -415,4 +415,61 @@ body{
   border: none;
   cursor: pointer;
   font-size: 16px;
+}
+
+.align {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.update-form {
+  background: rgba(0, 0, 0, 0.9);
+  padding: 20px;
+  border-radius: 4px;
+  font-size: 18px;
+  color: #ffffff;
+  font-family: "Lato", sans-serif;
+  display: flex;
+  flex-direction: column; 
+  align-items: center; 
+  width: 50vw; 
+}
+
+.update-form form {
+  width: 100%;
+}
+
+.update-form label {
+  margin-bottom: 10px;
+}
+
+.update-form input,
+.update-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ffffff;
+  border-radius: 4px;
+  background-color: transparent;
+  color: #ffffff;
+}
+
+.update-form textarea {
+  height: 100px; 
+}
+
+.update-form button {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  background-color: #009102; 
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.update-form button:hover {
+  background-color: #006e02; 
 }

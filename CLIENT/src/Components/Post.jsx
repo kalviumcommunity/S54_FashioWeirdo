@@ -11,12 +11,12 @@ function Posts() {
   useEffect(() => {
     async function fetchData() {
       try {
-        const response = await axios.get(import.meta.env.VITE_API_URL); // Adjust the API route accordingly
+        const response = await axios.get(import.meta.env.VITE_API_URL); 
         setData(response.data);
-        setError(null); // Reset error state if successful
+        setError(null); 
       } catch (error) {
         console.error("Error fetching data:", error);
-        setError("Error fetching data. Please try again."); // Set error message
+        setError("Error fetching data. Please try again."); 
       }
     }
     fetchData();
@@ -27,10 +27,9 @@ function Posts() {
   };
 
   const handleDelete = async (id, event) => {
-    event.stopPropagation(); // Stop the event from bubbling up
+    event.stopPropagation();
     try {
-      await axios.delete(`${import.meta.env.VITE_API_URL}/${id}`); // Adjust the API route accordingly
-      setData(data.filter((item) => item._id !== id)); // Remove the deleted item from the data array
+      await axios.delete(`${import.meta.env.VITE_API_URL}/${id}`); 
       toast.success("Post Deleted Successfully");
     } catch (error) {
       console.error("Error deleting data:", error);
@@ -64,7 +63,7 @@ function Posts() {
                   <p>{item.description}</p>
                 </div>
               )}
-              {/* Delete button */}
+              
               <button
                 onClick={(event) => handleDelete(item._id, event)}
                 className="delete-button"
