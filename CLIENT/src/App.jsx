@@ -6,8 +6,8 @@ import Post from "./Components/Post";
 import About from "./Components/About";
 import { Routes, Route } from "react-router-dom";
 import SignUp from "./Components/SignUp";
-import AddEntity from "./Components/EntityForm"
 import EntityForm from "./Components/EntityForm";
+import UpdateForm from "./Components/UpdateForm"
 
 function App() {
   return (
@@ -19,6 +19,7 @@ function App() {
         <Route path="/signup" element={<SignUp />} />
         <Route path="/about" element={<About />} />
         <Route path="/EntityForm" element={<EntityForm/>}/>
+        <Route path="/UpdateForm/:id" element={<UpdateForm />}/>
       </Routes>
     </>
   );
