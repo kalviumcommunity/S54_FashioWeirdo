@@ -47,7 +47,7 @@ const updateOneData = async (req, res) => {
     const updateOneData = await fashio.findByIdAndUpdate(
       req.params.id,
       req.body,
-      { new: true } // Add this option to return the updated document
+      { new: true } 
     );
     res.status(200).json({
       message: `Update Data for ${req.params.id}`,
