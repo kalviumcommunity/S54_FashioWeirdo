@@ -5,6 +5,7 @@ const app = express();
 const connection = require("./dbConnection");
 const crudRouter = require("./Routes/route")
 const userDataRoutes = require("./Routes/userRoute")
+const port = process.env.PORT || 3500
 
 app.use(express.json())
 
@@ -30,6 +31,6 @@ app.get('/',(req,res)=>{
     res.send('We hope to see you soon')
 })
 
-app.listen(3500,()=>{
+app.listen(port,()=>{
     console.log('this is now running on port 3500')
 })
