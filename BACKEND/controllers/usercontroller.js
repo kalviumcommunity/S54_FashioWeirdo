@@ -38,7 +38,7 @@ const createUser = async (req, res) => {
     const postUser = await UserData.create({
       Name,
       Email,
-      Password: sha512(Password), // Consider using bcrypt instead
+      Password: sha512(Password), 
       Username,
     });
     
