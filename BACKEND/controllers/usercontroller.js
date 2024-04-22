@@ -27,6 +27,32 @@ const getOneUser = async (req, res) => {
   }
 };
 
+const loginUser = async (req,res) => {
+  try {
+    const {Username, Password} = req.body
+    // console.log(Username, Password)
+    const codedPassword = sha512(Password)
+
+    const foundUser = await UserData.find({ Username: Username })
+    if (!foundUser) {
+      res.json("User does not Exist")
+    } else {
+      if (codedPassword === foundUser[0].Password) {
+        console.log("true user")
+        res.json(foundUser[0].Username)
+      } else {
+        console.log("Password is Incorrect")
+      }
+      console.log(foundUser[0].Password)
+    }
+    return
+
+  } catch (error) {
+    console.log("Login Erorr", error)
+  }
+  return
+}
+
 const createUser = async (req, res) => {
   try {
     const { error } = uservalidator(req.body);
@@ -93,4 +119,5 @@ module.exports = {
   createUser,
   updateUser,
   deleteUser,
+  loginUser,
 };
