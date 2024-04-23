@@ -1,5 +1,5 @@
 const UserData = require("../Schema/userSchema");
-const { sha512 } = require("js-sha512");
+const bcrypt = require('bcrypt');
 const { uservalidator } = require("../validators/uservalidator");
 
 require('dotenv').config();
@@ -27,6 +27,29 @@ const getOneUser = async (req, res) => {
   }
 };
 
+const loginUser = async (req, res) => {
+  try {
+    const { Username, Password } = req.body;
+    const foundUser = await UserData.findOne({ Username: Username });
+
+    if (!foundUser) {
+      return res.status(404).json({ message: "User does not exist" });
+    }
+
+    const passwordMatch = await bcrypt.compare(Password, foundUser.Password);
+    if (passwordMatch) {
+      console.log("true user");
+      return res.json(foundUser.Username);
+    } else {
+      console.log("Password is Incorrect");
+      return res.status(401).json({ message: "Incorrect password" });
+    }
+  } catch (error) {
+    console.log("Login Error", error);
+    return res.status(500).json({ message: "Login error" });
+  }
+};
+
 const createUser = async (req, res) => {
   try {
     const { error } = uservalidator(req.body);
@@ -35,10 +58,11 @@ const createUser = async (req, res) => {
     }
 
     const { Name, Email, Password, Username } = req.body;
+    const hashedPassword = await bcrypt.hash(Password, 10); // Hash password
     const postUser = await UserData.create({
       Name,
       Email,
-      Password: sha512(Password), 
+      Password: hashedPassword, // Store hashed password
       Username,
     });
     
@@ -93,4 +117,5 @@ module.exports = {
   createUser,
   updateUser,
   deleteUser,
+  loginUser,
 };
