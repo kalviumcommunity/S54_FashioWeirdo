@@ -1,5 +1,6 @@
 const UserData = require("../Schema/userSchema");
 const bcrypt = require('bcrypt');
+const jwt = require('jsonwebtoken')
 const { uservalidator } = require("../validators/uservalidator");
 
 require('dotenv').config();
@@ -36,14 +37,17 @@ const loginUser = async (req, res) => {
       return res.status(404).json({ message: "User does not exist" });
     }
 
+    
     const passwordMatch = await bcrypt.compare(Password, foundUser.Password);
     if (passwordMatch) {
       console.log("true user");
-      return res.json(foundUser.Username);
     } else {
       console.log("Password is Incorrect");
       return res.status(401).json({ message: "Incorrect password" });
     }
+
+    const token = jwt.sign({id:foundUser._id},process.env.SECRET_KEY);
+    res.status(200).json({Username,token, userID:foundUser._id,passwordMatch})
   } catch (error) {
     console.log("Login Error", error);
     return res.status(500).json({ message: "Login error" });
