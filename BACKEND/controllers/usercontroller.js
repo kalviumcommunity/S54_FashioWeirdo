@@ -1,7 +1,7 @@
 const UserData = require("../Schema/userSchema");
 const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken')
-const { uservalidator } = require("../validators/uservalidator");
+const { uservalidator } = require("../validators/userValidator");
 
 require('dotenv').config();
 
