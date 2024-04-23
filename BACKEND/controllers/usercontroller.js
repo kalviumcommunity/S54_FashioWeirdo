@@ -58,11 +58,11 @@ const createUser = async (req, res) => {
     }
 
     const { Name, Email, Password, Username } = req.body;
-    const hashedPassword = await bcrypt.hash(Password, 10); // Hash password
+    const hashedPassword = await bcrypt.hash(Password, 10); 
     const postUser = await UserData.create({
       Name,
       Email,
-      Password: hashedPassword, // Store hashed password
+      Password: hashedPassword,
       Username,
     });
     
