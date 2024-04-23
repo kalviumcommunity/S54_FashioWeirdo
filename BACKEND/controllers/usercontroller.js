@@ -1,5 +1,5 @@
 const UserData = require("../Schema/userSchema");
-const { sha512 } = require("js-sha512");
+const bcrypt = require('bcrypt');
 const { uservalidator } = require("../validators/uservalidator");
 
 require('dotenv').config();
@@ -27,31 +27,28 @@ const getOneUser = async (req, res) => {
   }
 };
 
-const loginUser = async (req,res) => {
+const loginUser = async (req, res) => {
   try {
-    const {Username, Password} = req.body
-    // console.log(Username, Password)
-    const codedPassword = sha512(Password)
+    const { Username, Password } = req.body;
+    const foundUser = await UserData.findOne({ Username: Username });
 
-    const foundUser = await UserData.find({ Username: Username })
     if (!foundUser) {
-      res.json("User does not Exist")
-    } else {
-      if (codedPassword === foundUser[0].Password) {
-        console.log("true user")
-        res.json(foundUser[0].Username)
-      } else {
-        console.log("Password is Incorrect")
-      }
-      console.log(foundUser[0].Password)
+      return res.status(404).json({ message: "User does not exist" });
     }
-    return
 
+    const passwordMatch = await bcrypt.compare(Password, foundUser.Password);
+    if (passwordMatch) {
+      console.log("true user");
+      return res.json(foundUser.Username);
+    } else {
+      console.log("Password is Incorrect");
+      return res.status(401).json({ message: "Incorrect password" });
+    }
   } catch (error) {
-    console.log("Login Erorr", error)
+    console.log("Login Error", error);
+    return res.status(500).json({ message: "Login error" });
   }
-  return
-}
+};
 
 const createUser = async (req, res) => {
   try {
@@ -61,10 +58,11 @@ const createUser = async (req, res) => {
     }
 
     const { Name, Email, Password, Username } = req.body;
+    const hashedPassword = await bcrypt.hash(Password, 10); // Hash password
     const postUser = await UserData.create({
       Name,
       Email,
-      Password: sha512(Password), 
+      Password: hashedPassword, // Store hashed password
       Username,
     });
     
