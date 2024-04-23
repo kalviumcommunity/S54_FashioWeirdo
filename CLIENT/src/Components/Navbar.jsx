@@ -4,17 +4,20 @@ import "../App.css";
 import logo from "../assets/newlogo.png";
 import { useCookies } from "react-cookie";
 
+
 function Navbar() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
-  const [cookies, getCookie, removeCookie] = useCookies(["Username"]);
+  const [cookies, removeCookie] = useCookies(["Username","userToken"]);
 
   const logout=()=>{
     removeCookie('Username');
+    removeCookie('userToken')
     setIsLoggedIn(false)
   }
   useEffect(() => {
     const username = cookies["Username"];
-    if (username) {
+    const userToken = cookies["userToken"];
+    if (username && userToken) {
       setIsLoggedIn(true);
     }
   }, [cookies]);

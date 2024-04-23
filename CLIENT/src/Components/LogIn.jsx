@@ -9,7 +9,7 @@ import { useCookies } from "react-cookie";
 
 const LogIn = () => {
   const navigate = useNavigate();
-  const [cookies, setCookie] = useCookies(["Username"]);
+  const [cookies, setCookie] = useCookies(["Username","userToken"]);
   const [isPasswordValid, setIsPasswordValid] = useState(null);
   const {
     register,
@@ -24,7 +24,9 @@ const LogIn = () => {
     try {
       const response = await axios.post(`http://localhost:3500/user/login`,data);
       console.log("Response", response.data)
-      setCookie("Username", response.data)
+      console.log(response.data.token)
+      setCookie("Username", response.data.Username)
+      setCookie("userToken",response.data.token)
     } catch (error) {
       console.error("Error logging in:", error);
     }
@@ -80,7 +82,7 @@ const LogIn = () => {
           {/* Checkbox to show/hide password */}
           <label className="label-flex">
           <h2 className="shpass">Show Password</h2>
-          <input type="checkbox" class="checkbox"onClick={togglePasswordVisibility} />
+          <input type="checkbox" className="checkbox"onClick={togglePasswordVisibility} />
              
           </label>
 
