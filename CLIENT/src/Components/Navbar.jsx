@@ -39,11 +39,6 @@ function Navbar() {
             </Link>
           </li>
           <li className="nav-item">
-            <Link to="/about" className="nav-link">
-              About
-            </Link>
-          </li>
-          <li className="nav-item">
             <Link to="/Filter" className="nav-link">
               Filter
             </Link>
