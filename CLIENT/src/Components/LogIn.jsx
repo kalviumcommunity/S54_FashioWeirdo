@@ -22,7 +22,7 @@ const LogIn = () => {
   const formSubmitHandler = async (data) => {
     console.log("data: ", data);
     try {
-      const response = await axios.post(`http://localhost:3500/user/login`,data);
+      const response = await axios.post(`${import.meta.env.VITE_API_AUTH}/login`,data);
       console.log("Response", response.data)
       console.log(response.data.token)
       setCookie("Username", response.data.Username)
