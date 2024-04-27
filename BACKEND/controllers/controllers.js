@@ -32,8 +32,8 @@ const createData = async (req, res) => {
       return res.status(400).json({ message: error.details.map(d => d.message).join(', ') });
     }
 
-    const { name, region, image, description} = req.body;
-    const postData = await fashio.create({ name, region, image, description});
+    const { name, region, image, description,Username} = req.body;
+    const postData = await fashio.create({ name, region, image, description,Username});
     res.status(201).json({ message: "Create Data", postData });
   } catch (error) {
     console.log("error", error);

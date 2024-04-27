@@ -1,3 +1,4 @@
+const { required } = require('joi');
 const mongoose = require('mongoose');
 
 const FashionSchema = new mongoose.Schema({
@@ -17,6 +18,10 @@ const FashionSchema = new mongoose.Schema({
         type: String,
         required: true,
         index: true,
+    },
+    Username:{
+        type:String,
+        required: true,
     }
 
    

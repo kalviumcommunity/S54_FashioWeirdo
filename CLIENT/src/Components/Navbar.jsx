@@ -44,6 +44,11 @@ function Navbar() {
             </Link>
           </li>
           <li className="nav-item">
+            <Link to="/Filter" className="nav-link">
+              Filter
+            </Link>
+          </li>
+          <li className="nav-item">
             {isLoggedIn ? (
               <p className="nav-link" onClick={logout}>Logout</p>
             ) : (
