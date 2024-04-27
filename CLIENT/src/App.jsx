@@ -9,7 +9,7 @@ import { Routes, Route } from "react-router-dom";
 import SignUp from "./Components/SignUp";
 import EntityForm from "./Components/EntityForm";
 import UpdateForm from "./Components/UpdateForm"
-
+import FilteredContent from "./Components/FilteredContent";
 function App() {
   return (
     <>
@@ -22,6 +22,7 @@ function App() {
         <Route path="/EntityForm" element={<EntityForm/>}/>
         <Route path="/UpdateForm/:id" element={<UpdateForm />}/>
         <Route path="/LogIn" element={<LogIn/>}/>
+        <Route path="/Filter" element={<FilteredContent/>}/>
       </Routes>
     </>
   );
